@@ -9,10 +9,12 @@
     "postinstall": "`npm bin`/tsd install",
     "ts:clean": "rm -rf dist/",
     "ts:compile": "`npm bin`/tsc --pretty",
-    "ts:watch": "npm run ts:clean && npm run ts:compile -- --watch | `npm bin`/build-error-notifier"
+    "ts:watch": "npm run ts:clean && npm run ts:compile -- --watch | `npm bin`/build-error-notifier",
+    "ts:debug": "`npm bin`/node-debug --debug-brk --nodejs='--harmony --use_strict' --"
   },
   "devDependencies": {
     "build-error-notifier": "^0.3.0",
+    "node-inspector": "^0.12.7",
     "tsd": "^0.6.5",
     "typescript": "^1.8.9"
   },
