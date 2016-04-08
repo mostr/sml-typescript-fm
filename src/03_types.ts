@@ -52,3 +52,22 @@ acceptQuacksAndWalksTogether(qw);
 // acceptQuacksAndWalksTogether(q);
 
 
+type UserName = string
+
+function greetUser(user: UserName): void {
+  console.log('Hello', user);
+}
+
+
+type UserAge = number
+
+function getTuple(user: any): [UserName, UserAge] {
+  return [user.name, user.age]
+}
+
+let tuple = getTuple({name: 'John Doe', age: 30});
+let [uName, uAge] = tuple;
+console.log(tuple);
+console.log(uName, uAge);
+
+
