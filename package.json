@@ -1,0 +1,12 @@
+{
+  "name": "friday-marketplace-typescript",
+  "version": "1.0.0",
+  "description": "Code for FM on Typescript by mostr",
+  "main": "index.js",
+  "author": "mostr",
+  "license": "MIT",
+  "devDependencies": {
+    "tsd": "^0.6.5",
+    "typescript": "^1.8.9"
+  }
+}
