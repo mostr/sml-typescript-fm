@@ -5,8 +5,18 @@
   "main": "index.js",
   "author": "mostr",
   "license": "MIT",
+  "scripts": {
+    "postinstall": "`npm bin`/tsd install",
+    "ts:clean": "rm -rf dist/",
+    "ts:compile": "`npm bin`/tsc --pretty",
+    "ts:watch": "npm run ts:clean && npm run ts:compile -- --watch | `npm bin`/build-error-notifier"
+  },
   "devDependencies": {
+    "build-error-notifier": "^0.3.0",
     "tsd": "^0.6.5",
     "typescript": "^1.8.9"
+  },
+  "dependencies": {
+    "left-pad": "^1.0.1"
   }
 }
